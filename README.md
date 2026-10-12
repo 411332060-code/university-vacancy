@@ -2,7 +2,7 @@
 
 BI 作業。用教育部公開的系所層級資料，看全台大專校院各學年的核定名額、註冊人數和缺額。
 
-網站：https://crazray1520.github.io/university-vacancy/
+網站：https://411332060-code.github.io/university-vacancy/
 
 可以依學年區間、公私立、學校類別、學制、日間／進修和學校篩選，所有圖表連動。
 

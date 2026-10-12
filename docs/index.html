@@ -306,7 +306,7 @@ footer .warn { color: var(--ink); }
         <table id="fMerges"></table>
       </div>
     </div>
-    <p style="margin-top:22px">原始碼與資料：<a href="https://github.com/CRAZRAY1520/university-vacancy" target="_blank" rel="noopener">github.com/CRAZRAY1520/university-vacancy</a></p>
+    <p style="margin-top:22px">原始碼與資料：<a href="https://github.com/411332060-code/university-vacancy" target="_blank" rel="noopener">github.com/411332060-code/university-vacancy</a></p>
   </div>
 </footer>
 
@@ -493,9 +493,9 @@ footer .warn { color: var(--ink); }
     var chgV = r.V[y0] > 0 ? (r.V[y1] / r.V[y0] - 1) * 100 : null;
     var one = y0 === y1;
     $("k1l").textContent = ly + "總缺額"; $("k1v").innerHTML = r.empty ? "—" : fmt(r.V[y1]) + "<small>人</small>";
-    $("k1n").textContent = "逐列 max(名額 − 保留 − 註冊, 0) 加總";
+    $("k1n").textContent = "逐列 max(核定名額 − 保留入學 − 註冊, 0) 加總";
     $("k2l").textContent = ly + "註冊率"; $("k2v").textContent = rt === null ? "—" : pct1(rt);
-    $("k2n").textContent = "Σ註冊 ÷ Σ(名額 − 保留)";
+    $("k2n").textContent = "Σ註冊 ÷ Σ可招名額（核定名額 − 保留入學）";
     $("k3l").textContent = "核定名額（含保留入學）較 " + by + "增減"; $("k3v").textContent = one || chgA === null ? "—" : signed(chgA);
     $("k3n").textContent = one ? "起訖同一學年，無法比較" : "核定名額 " + fmt(r.A[y0]) + " → " + fmt(r.A[y1]) + " 人；可招名額 " + fmt(r.A[y0] - r.B[y0]) + " → " + fmt(r.A[y1] - r.B[y1]) + " 人";
     $("k4l").textContent = "總缺額較 " + by + "增減"; $("k4v").textContent = one || chgV === null ? "—" : signed(chgV);
@@ -794,7 +794,7 @@ footer .warn { color: var(--ink); }
     $("fSource").innerHTML =
       "<li>" + esc(S.agency) + "：" + esc(S.name) + "，來自 <a href=\"" + esc(S.datasetUrl) + '" target="_blank" rel="noopener">data.gov.tw 資料集 26228</a>（' + esc(S.license) + "）。</li>" +
       "<li>期間：" + M.period.from + "–" + M.period.to + " 學年（西元 " + M.period.yearsCE[0] + "–" + M.period.yearsCE[NY - 1] + "），統計基準日為" + esc(S.baseDate) + "。</li>" +
-      "<li>下載日期：" + esc(S.downloaded) + "。原始檔與整理程式在 <a href=\"https://github.com/CRAZRAY1520/university-vacancy\" target=\"_blank\" rel=\"noopener\">GitHub</a> 可下載。</li>";
+      "<li>下載日期：" + esc(S.downloaded) + "。原始檔與整理程式在 <a href=\"https://github.com/411332060-code/university-vacancy\" target=\"_blank\" rel=\"noopener\">GitHub</a> 可下載。</li>";
     var lim = M.limitations.map(function (t, i) { return "<li>" + (i === 0 || i === 2 || i === 3 ? "<b class=\"warn\">" + esc(t) + "</b>" : esc(t)) + "</li>"; });
     $("fLimits").innerHTML = lim.join("");
     $("fMerges").innerHTML = M.merges.map(function (m) {
